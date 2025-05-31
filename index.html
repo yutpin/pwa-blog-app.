@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2F3BA2" />
+  <title>My Blog PWA</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>My News Blog</h1>
+    <p>Latest updates and articles</p>
+  </header>
+
+  <main>
+    <article>
+      <h2>Article Title 1</h2>
+      <p>This is the content of the first article. Stay tuned for more updates!</p>
+    </article>
+    <article>
+      <h2>Article Title 2</h2>
+      <p>This is the content of the second article. Explore more interesting topics here!</p>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Blog PWA</p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(function(registration) {
+          console.log('Service Worker Registered with scope:', registration.scope);
+        }).catch(function(error) {
+          console.log('Service Worker Registration failed:', error);
+        });
+    }
+  </script>
+</body>
+</html>
